@@ -8,6 +8,9 @@ public class MatrixHelixMorph {
      */
     public static int[][] helix( int[][] inMatrix) {
 
+        if (inMatrix == null || inMatrix.length == 0)
+            return null;
+
         int rows = inMatrix.length;
         int cols = inMatrix[0].length;
 
