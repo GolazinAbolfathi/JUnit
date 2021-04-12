@@ -12,7 +12,19 @@ public class MatrixHelixMorph {
             return null;
 
         int rows = inMatrix.length;
-        int cols = inMatrix[0].length;
+//        int cols = inMatrix[0].length;
+
+        int cols = 0;
+
+        if (rows > 0) {
+            cols = inMatrix[0].length;
+
+            for (int i = 1; i < inMatrix.length; i++) {
+                if (cols != inMatrix[i].length) {
+                    return null;
+                }
+            }
+        }
 
         int spiralArray[][] = new int[rows][cols];
         int oneDimArray[] = new int[rows * cols];
