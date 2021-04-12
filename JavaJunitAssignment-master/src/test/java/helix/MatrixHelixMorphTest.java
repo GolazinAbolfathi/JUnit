@@ -106,8 +106,8 @@ public class MatrixHelixMorphTest {
     }
     @Test
     public void test1x2() {
-        int[][] inMatrix = {{1, 2}};
-        int[][] expOutput = {{1, 2}};
+        int[][] inMatrix = {{4, 50}};
+        int[][] expOutput = {{4, 50}};
         assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
     }
 
