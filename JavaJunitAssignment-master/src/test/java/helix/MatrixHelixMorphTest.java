@@ -52,6 +52,13 @@ public class MatrixHelixMorphTest {
     }
 
     @Test
+    public void invalidMatrixTest() {
+        int[][] inMatrix = {{1, 2}, {3, 4, 5}, {6, 7}};
+        int[][] expOutput = null;
+        assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
+    }
+
+    @Test
     public void test4x3() {
         int[][] inMatrix  = { {2,3,1,6}, {12,13,5,7},{8,4,11,9} };
         int[][] expOutput = { {2,3,1,6}, {4,11,9,12},{8,7,5,13} };
@@ -104,6 +111,14 @@ public class MatrixHelixMorphTest {
         int[][] expOutput = {};
         assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
     }
+
+    @Test
+    public  void nullMatrixTest(){
+        int[][] inMatrix = null;
+        int[][] expOutput = null;
+        assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
+    }
+
 
     // ADD TESTS TO CHECK PARTITIONS
 }
