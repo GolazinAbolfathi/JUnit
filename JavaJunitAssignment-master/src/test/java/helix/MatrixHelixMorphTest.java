@@ -98,5 +98,12 @@ public class MatrixHelixMorphTest {
         assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
     }
 
+    @Test
+    public void testMatrix0x0(){
+        int[][] inMatrix = {};
+        int[][] expOutput = {};
+        assertTrue(testEqual(expOutput, MatrixHelixMorph.helix(inMatrix)));
+    }
+
     // ADD TESTS TO CHECK PARTITIONS
 }
